@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HeartRateTweet</string>
+
+    <string name="confirmation_animation_success">Success</string>
+    <string name="confirmation_animation_failure">Failure</string>
+    <string name="confirmation_animation_open_on_phone">Success</string>
+    <string name="label_heart_rate">心拍数</string>
+    <string name="label_measurement">-</string>
+
+</resources>

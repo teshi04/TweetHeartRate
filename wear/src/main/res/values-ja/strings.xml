@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">心拍数ツイート</string>
+
+    <string name="confirmation_animation_success">Success</string>
+    <string name="confirmation_animation_failure">Failure</string>
+
+</resources>
