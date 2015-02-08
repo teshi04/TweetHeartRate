@@ -78,5 +78,6 @@ public class MyActivity extends Activity implements SensorEventListener {
         Intent intent = new Intent(this, MessageService.class);
         intent.putExtra(MessageService.EXTRA_HEART_RATE, getString(R.string.text, String.valueOf(mHartRate)));
         startService(intent);
+        finish();
     }
 }
