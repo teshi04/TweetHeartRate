@@ -48,7 +48,7 @@ public class MessageService extends IntentService implements GoogleApiClient.Con
 
         if (result.getStatus().isSuccess()) {
             startConfirmationActivity(this,
-                    ConfirmationActivity.SUCCESS_ANIMATION, getString(R.string.confirmation_animation_open_on_phone));
+                    ConfirmationActivity.OPEN_ON_PHONE_ANIMATION, getString(R.string.common_open_on_phone));
         } else {
             startConfirmationActivity(this,
                     ConfirmationActivity.FAILURE_ANIMATION, getString(R.string.confirmation_animation_failure));
