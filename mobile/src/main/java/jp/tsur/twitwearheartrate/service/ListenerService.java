@@ -1,12 +1,13 @@
 package jp.tsur.twitwearheartrate.service;
 
+import android.content.Intent;
+
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Wearable;
 import com.google.android.gms.wearable.WearableListenerService;
 
-import jp.tsur.twitwearheartrate.twitter.TwitterApi;
-import twitter4j.TwitterException;
+import jp.tsur.twitwearheartrate.ui.ResultActivity;
 
 
 public class ListenerService extends WearableListenerService {
@@ -28,13 +29,12 @@ public class ListenerService extends WearableListenerService {
         if (event.getPath().equals(DATA_MAP_PATH_UPDATE_STATUS)) {
             byte[] data = event.getData();
 
-            try {
-                TwitterApi.updateStatus(this, new String(data));
-            } catch (TwitterException e) {
-                e.printStackTrace();
-            }
+            String text = new String(data);
+
+            Intent intent = new Intent(this, ResultActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra(ResultActivity.EXTRA_HEART_RATE, text);
+            startActivity(intent);
         }
     }
-
-
 }

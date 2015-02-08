@@ -28,8 +28,8 @@
         android:layout_height="68dp"
         android:layout_gravity="right"
         android:layout_marginRight="16dp"
-        android:src="@drawable/twitter_logo_white"
-        app:circle_color="@color/blue"
+        android:src="@drawable/ic_send_white_36dp"
+        app:circle_color="#F65c4b"
         app:circle_radius="32dp"
         app:circle_radius_pressed="34dp" />
 </LinearLayout>

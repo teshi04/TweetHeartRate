@@ -2,16 +2,12 @@
 <resources>
 
     <string name="app_name">心拍数ツイート</string>
-    <string name="action_settings">Settings</string>
 
     <!--Main-->
-    <string name="label_connected_twitter_id">connected: %s</string>
-    <string name="action_logout">Sign out</string>
+    <string name="label_description">Android Wear でアプリを立ち上げて\n自分の心拍数をシェアしよう。</string>
 
-    <!-- Sign in-->
-    <string name="twitter_callback_url">hrt://twitter</string>
-    <string name="button_sign_in_with_twitter">Sign in with Twitter</string>
-    <string name="toast_api_key_is_invalid">API Key is invalid.</string>
-    <string name="label_authentication_failure">Authentication failure</string>
+    <!-- Result -->
+    <string name="title_activity_share">シェア</string>
+    <string name="label_share">シェア</string>
 
 </resources>

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HeartRateTweet</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Heart Rate Tweet</string>
 
     <!--Main-->
-    <string name="label_connected_twitter_id">connected: %s</string>
-    <string name="action_logout">Sign out</string>
+    <string name="label_description">Launch the app in Android Wear,\nShare the heart rate.</string>
 
-    <!-- Sign in-->
-    <string name="twitter_callback_url">hrt://twitter</string>
-    <string name="button_sign_in_with_twitter">Sign in with Twitter</string>
-    <string name="toast_api_key_is_invalid">API Key is invalid.</string>
-    <string name="label_authentication_failure">Authentication failure</string>
+    <!-- Result -->
+    <string name="title_activity_share">Share</string>
+    <string name="label_share">Share</string>
 
 </resources>

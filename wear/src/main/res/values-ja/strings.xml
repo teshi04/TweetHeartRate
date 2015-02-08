@@ -5,5 +5,10 @@
 
     <string name="confirmation_animation_success">Success</string>
     <string name="confirmation_animation_failure">Failure</string>
+    <string name="confirmation_animation_open_on_phone">Success</string>
+
+    <string name="label_heart_rate">心拍数</string>
+    <string name="label_measurement">…</string>
+    <string name="text">私の現在の心拍数は %s bpm です。https://play.google.com/store/apps/details?id=jp.tsur.twitwearheartrate</string>
 
 </resources>

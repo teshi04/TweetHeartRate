@@ -8,6 +8,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -39,10 +40,11 @@ public class MyActivity extends Activity implements SensorEventListener {
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
-        if (mSensorManager != null){
+        if (mSensorManager != null) {
             mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
@@ -50,16 +52,15 @@ public class MyActivity extends Activity implements SensorEventListener {
     @Override
     protected void onPause() {
         super.onPause();
-        if (mSensorManager!=null)
+        if (mSensorManager != null)
             mSensorManager.unregisterListener(this);
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
-            Log.d("TAG", String.valueOf(event.values[0]));
             if ((int) event.values[0] > 0) {
-                mHartRate =  String.valueOf((int) event.values[0]);
+                mHartRate = String.valueOf((int) event.values[0]);
                 mTextView.setText(mHartRate);
             }
 
@@ -73,8 +74,9 @@ public class MyActivity extends Activity implements SensorEventListener {
 
     @OnClick(R.id.completion_button)
     void completion() {
+        if (TextUtils.isEmpty(mHartRate)) return;
         Intent intent = new Intent(this, MessageService.class);
-        intent.putExtra(MessageService.EXTRA_HEART_RATE, "私の現在の心拍数は " + String.valueOf(mHartRate) + " bpm です #心拍数ツイート https://play.google.com/store/apps/details?id=jp.tsur.twitwearheartrate");
+        intent.putExtra(MessageService.EXTRA_HEART_RATE, getString(R.string.text, String.valueOf(mHartRate)));
         startService(intent);
     }
 }
