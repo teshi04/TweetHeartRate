@@ -6,8 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import jp.tsur.twitwearheartrate.R;
 
@@ -16,10 +16,10 @@ public class ResultActivity extends ActionBarActivity {
 
     public static final String EXTRA_HEART_RATE = "heart_rate";
 
-    @InjectView(R.id.toolbar)
+    @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.heart_rate)
+    @Bind(R.id.heart_rate)
     TextView heartRateText;
 
     private String heartRate;
@@ -28,7 +28,7 @@ public class ResultActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
