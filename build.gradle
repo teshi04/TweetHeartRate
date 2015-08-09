@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.android.tools.build:gradle:1.2.3'
         classpath 'com.uphyca.gradle:gradle-android-apt-plugin:0.9.4'
 
 
@@ -29,5 +29,5 @@ project.ext {
     preDexLibs = !project.hasProperty('disablePreDex')
 
     twitter4jVersion = "4.0.2"
-    butterKnifeVersion = '5.0.1'
+    butterKnifeVersion = '7.0.1'
 }

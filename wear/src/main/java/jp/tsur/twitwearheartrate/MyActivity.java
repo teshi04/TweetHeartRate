@@ -9,12 +9,11 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class MyActivity extends Activity implements SensorEventListener {
@@ -24,14 +23,14 @@ public class MyActivity extends Activity implements SensorEventListener {
 
     private String mHartRate;
 
-    @InjectView(R.id.text_view)
+    @Bind(R.id.text_view)
     TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
