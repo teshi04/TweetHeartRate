@@ -3,7 +3,7 @@ package jp.tsur.twitwearheartrate.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -12,12 +12,9 @@ import butterknife.OnClick;
 import jp.tsur.twitwearheartrate.R;
 
 
-public class ResultActivity extends ActionBarActivity {
+public class ResultActivity extends AppCompatActivity {
 
     public static final String EXTRA_HEART_RATE = "heart_rate";
-
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
 
     @Bind(R.id.heart_rate)
     TextView heartRateText;
@@ -29,10 +26,6 @@ public class ResultActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         ButterKnife.bind(this);
-
-        if (mToolbar != null) {
-            setSupportActionBar(mToolbar);
-        }
 
         heartRate = getIntent().getStringExtra(EXTRA_HEART_RATE);
         heartRateText.setText(heartRate);

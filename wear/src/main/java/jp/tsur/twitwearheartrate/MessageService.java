@@ -20,7 +20,6 @@ public class MessageService extends IntentService implements GoogleApiClient.Con
     public static final String EXTRA_HEART_RATE = "heartrate";
     public static final String PATH_HEART_RATE = "/heartrate";
 
-
     private GoogleApiClient mGoogleApiClient;
 
     public MessageService() {
@@ -39,7 +38,7 @@ public class MessageService extends IntentService implements GoogleApiClient.Con
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        mGoogleApiClient.blockingConnect(100, TimeUnit.MILLISECONDS);
+        mGoogleApiClient.blockingConnect(15, TimeUnit.SECONDS);
         NodeApi.GetConnectedNodesResult result = Wearable.NodeApi.getConnectedNodes(mGoogleApiClient).await();
         for (Node node : result.getNodes()) {
             Wearable.MessageApi.sendMessage(mGoogleApiClient, node.getId(), PATH_HEART_RATE,

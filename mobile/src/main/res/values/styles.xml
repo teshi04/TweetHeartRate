@@ -5,8 +5,6 @@
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">#EF5350</item>
         <item name="colorPrimaryDark">#F44336</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
     </style>
 
 </resources>

@@ -37,7 +37,6 @@ public class MyActivity extends Activity implements SensorEventListener {
         //Sensor and sensor manager
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
-
     }
 
     @Override
@@ -62,7 +61,6 @@ public class MyActivity extends Activity implements SensorEventListener {
                 mHartRate = String.valueOf((int) event.values[0]);
                 mTextView.setText(mHartRate);
             }
-
         }
     }
 

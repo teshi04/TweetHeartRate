@@ -1,21 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jp.tsur.twitwear.ui.SignInActivity">
-
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:gravity="center_horizontal"
-        android:text="@string/label_description"
-        android:textColor="@android:color/black" />
-</RelativeLayout>
+    android:gravity="center"
+    android:text="@string/label_description"
+    android:textColor="@android:color/black" />

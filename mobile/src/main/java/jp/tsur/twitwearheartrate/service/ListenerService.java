@@ -23,7 +23,6 @@ public class ListenerService extends WearableListenerService {
         mGoogleApiClient.connect();
     }
 
-
     @Override
     public void onMessageReceived(MessageEvent event) {
         if (event.getPath().equals(DATA_MAP_PATH_UPDATE_STATUS)) {
